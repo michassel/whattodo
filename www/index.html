@@ -1,11 +1,102 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>Blank App</title>
-    </head>
-    <body>
-        <script type="text/javascript" src="cordova.js"></script>
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Co robić?</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template 
+    <link href="css/style.css" rel="stylesheet">-->
+    <style>
+      body {
+        padding: 5rem 0;
+      }
+      .starter-template {
+        padding: 2rem 0rem;
+        text-align: center;
+      }
+      .black {
+        background:url(img/pw_maze_black.png) left top repeat;
+      }
+    </style>
+  </head>
+
+  <body class="black">
+
+    <div class="container">
+
+      <div class="starter-template">
+        <img src="img/logo.png" class="img-responsive center-block" style="padding: 1em;" alt="Co robić?"><br><br>
+            <div class="form-group" id="div-input">
+              <div class="input-group ">
+                <input type="text" class="form-control input-lg" id="input-question" placeholder="No co zrobić?">
+                <span class="input-group-btn">
+                  <button class="btn btn-success btn-lg" type="button" id="btn-ask">Zapytaj</button>
+                </span>
+              </div>
+            </div>
+      </div>
+
+      <div class="bs-component">
+        <div class="alert alert-success" style="display: none;" style="margin-bottom: 40px;" id="answer">
+          <button type="button" class="close" aria-hidden="true">&times;</button>
+          <h4 id="msg">We wsi gadają że:</h4>
+          <p><h1 class="text-center" id="second_msg">ruchać kozy trzeba, a nawet można</h1></p>
+        </div>
+      </div>
+      
+      <div class="bs-component">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h4>Najpopularniejsze pytania:</h4>
+          </li>
+          <li class="list-group-item">
+            <span class="badge">14</span>
+            Cras justo odio
+          </li>
+          <li class="list-group-item">
+            <span class="badge">2</span>
+            Dapibus ac facilisis in
+          </li>
+          <li class="list-group-item">
+            <span class="badge">1</span>
+            Morbi leo risus
+          </li>
+        </ul>
+      </div>
+      
+      <div class="bs-component">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h4>Ostatnio zadane pytania:</h4>
+          </li>
+          <li class="list-group-item">
+            <span class="badge">14</span>
+            Cras justo odio
+          </li>
+          <li class="list-group-item">
+            <span class="badge">2</span>
+            Dapibus ac facilisis in
+          </li>
+          <li class="list-group-item">
+            <span class="badge">1</span>
+            Morbi leo risus
+          </li>
+        </ul>
+      </div>
+    
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script> 
+  </body>
 </html>
