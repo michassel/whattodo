@@ -9,6 +9,8 @@ $(document).ready( function(){
             return false;
         }
         $("#div-input").removeClass("has-error");
+
+        $(".alert").slideDown(300).fadeTo(500, 1);
         
         $.ajax({
             type: "POST",
