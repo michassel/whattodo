@@ -36,6 +36,40 @@ $(document).ready( function(){
             }
         });
     });
+
+    $.ajax({
+        type: "POST",
+        url: "http://abrakadabra.devs-itechnologie.dyndns.biz/game/api/ostatnie_pytania_czas.php",
+        dataType:'json',
+        success: function(data) {
+            //console.log(data);
+            var array_length = data.length;
+            
+            for(var i=0;i<array_length;i++) {
+                $("#last_questions").append('<li class="list-group-item"><span class="badge">' + data[i].id + '</span>' + data[i].pytanie + '</li>'); 
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(textStatus + jqXHR.responseText);
+        }
+    });
+    
+    $.ajax({
+        type: "POST",
+        url: "http://abrakadabra.devs-itechnologie.dyndns.biz/game/api/ostatnie_pytania.php",
+        dataType:'json',
+        success: function(data) {
+            console.log(data);
+            var array_length = data.length;
+            
+            for(var i=0;i<array_length;i++) {
+                $("#popular_questions").append('<li class="list-group-item"><span class="badge">' + data[i].id + '</span>' + data[i].pytanie + '</li>'); 
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(textStatus + jqXHR.responseText);
+        }
+    });
     
 });   
  
@@ -43,4 +77,9 @@ $( ".close" ).click(function() {
     $(".alert").fadeTo(500, 0).slideUp(500, function(){
         //$(this).remove(); 
     });
+});
+
+$(".list-group-item").click(function() {
+    var question = $(this).val();
+    console.log(question);
 });
