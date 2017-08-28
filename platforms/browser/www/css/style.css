@@ -1,0 +1,9 @@
+body {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background:url(../img/pw_maze_black.png) left top repeat;
+}
+.starter-template {
+    padding: 3rem 0rem;
+    text-align: center;
+}

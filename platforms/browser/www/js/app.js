@@ -14,12 +14,12 @@ $(document).ready( function(){
         
         $.ajax({
             type: "POST",
-            url: "http://abrakadabra.devs-itechnologie.dyndns.biz/game/api/pytaj.php",
+            url: "htpp://abrakadabra.devs-itechnologie.dyndns.biz/game/api/pytaj.php",
             dataType:'json',
             data: {question: (question)},
             success: function(data) {
-                $(".alert").slideDown(300).fadeTo(500, 1);
                 $("#msg").html(data);
+                $(".alert").slideDown(300).fadeTo(500, 1);
                 if (data.status == "error") {
                     console.log(data);
                     $("#msg").html(data.msg);
@@ -31,10 +31,6 @@ $(document).ready( function(){
                     $("#second_msg").html(data.second_msg);
                     $(".alert").slideDown(300).fadeTo(500, 1);
                 }
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                $(".alert").slideDown(300).fadeTo(500, 1);
-                $("#msg").html(textStatus + jqXHR.responseText);
             }
         });
     });
