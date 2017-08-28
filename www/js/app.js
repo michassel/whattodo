@@ -42,7 +42,7 @@ $(document).ready( function(){
         url: "http://abrakadabra.devs-itechnologie.dyndns.biz/game/api/ostatnie_pytania_czas.php",
         dataType:'json',
         success: function(data) {
-            //console.log(data);
+            console.log(data);
             var array_length = data.length;
             
             for(var i=0;i<array_length;i++) {
