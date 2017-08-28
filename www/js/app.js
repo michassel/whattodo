@@ -16,6 +16,8 @@ $(document).ready( function(){
             dataType:'json',
             data: {question: (question)},
             success: function(data) {
+                $("#msg").html(data);
+                $(".alert").slideDown(300).fadeTo(500, 1);
                 if (data.status == "error") {
                     console.log(data);
                     $("#msg").html(data.msg);
